@@ -47,7 +47,7 @@ class ExceptionNotification::Notifier < ActionMailer::Base
     source = self.class.exception_source(controller)
     content_type "text/plain"
 
-    subject    "#{email_prefix}#{source} (#{exception.class}) #{exception.message.inspect}"
+    subject    "#{email_prefix}#{source} (#{exception.class})"
 
     recipients exception_recipients
     from       sender_address
